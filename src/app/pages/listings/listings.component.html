@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="searchbar">
+    <input type="text" class="search" placeholder="Enter location district">
+    <button class="searchbtn">Search</button>
+</div>
+<div class="cards" *ngFor="let product of productInfo">
+    <div class="card" style="width: 18rem;">
+        <!-- <img src="{{productInfo.image}}" class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">{{product.type}}</h5>
+          <p class="card-text">{{product.owner}}</p>
+          <table>
+            <tr>
+              <td>
+                <a href="#" class="btn btn-primary">Book</a>
+              </td>
+              <td>
+                <!-- <a class="btn">${{productInfo && productInfo.price}}</a> -->
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div> 
+
+</div>

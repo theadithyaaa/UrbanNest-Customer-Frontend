@@ -1,0 +1,44 @@
+.cards {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 2%;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    text-align: center;
+}
+
+
+.card {
+    margin: 2%;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+.search {
+    width: 30%;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    border: none;
+    margin-right: 10px;
+}
+
+.searchbtn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.searchbtn:hover {
+    background-color: #0056b3;
+}

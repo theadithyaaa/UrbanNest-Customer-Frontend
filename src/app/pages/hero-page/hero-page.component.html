@@ -1,0 +1,84 @@
+<div class="banner">  
+      <div class="logo"><P>UrbanNest  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+      </svg></P></div>
+      <div class="text"><p>Welcome to UrbanNest, where your dream home becomes a reality. Whether you're buying, selling, or renting, we offer a curated selection of properties to match every lifestyle and budget. With a dedicated team of real estate experts, we are committed to guiding you through every step of the process, ensuring that you make informed decisions with confidence.
+  
+        At UrbanNest, we believe that finding the perfect home is more than just a transaction—it's about creating a space where memories are made. Explore our listings today and begin your journey toward the home you’ve always envisioned. <br> Create an account, by clicking get started to continue...</p>
+      
+      
+          <button  type="button" class="btnGetStarted" data-bs-toggle="modal" data-bs-target="#modal"> 
+              GET STARTED 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg>
+            </button>
+            
+          </div>
+       
+  
+  </div>
+  
+
+  <!-- Customer signup Modal -->
+<div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style=" justify-content: center; display: flex">
+        <form class="form">
+       <p class="form-title">Create an account</p>
+        <div class="input-container">
+          <input type="name" placeholder="Enter Name">
+          <span>
+          </span>
+      </div>
+      <div class="input-container">
+        <input type="email" placeholder="Enter email">
+        <span>
+        </span>
+    </div>
+      <div class="input-container">
+          <input type="password" placeholder="Enter password">
+        </div>
+         <button type="submit" class="submit" href="# " routerLink="/dashboard">
+        Sign in
+      </button>  
+      <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" >click here to Login</a></p>
+
+   </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- customer login modal -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style=" justify-content: center; display: flex">
+        <form class="form">
+       <p class="form-title">Login </p>
+        <div class="input-container">
+          <input type="email" placeholder="Enter email">
+          <span>
+          </span>
+      </div>
+      <div class="input-container">
+          <input type="password" placeholder="Enter password">
+        </div>
+         <button type="submit" class="submit" href="# " routerLink="/dashboard">
+        Login    
+      </button>      
+   </form>
+      </div>
+    </div>
+  </div>
+</div>

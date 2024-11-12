@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.heading {
+   font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  margin: 5%;
+ 
+}
+
+.cards {
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.card {
+    margin: 2%;
+}
+
+.cards :hover {
+    transform: scale(1.05);
+    transition: 0.25s;
+    color: #007BFF;
+}
