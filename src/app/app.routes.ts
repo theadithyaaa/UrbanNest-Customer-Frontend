@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListingsComponent } from './pages/listings/listings.component';
 import { AgentComponent } from './pages/agent/agent.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: "aboutus",
         component: AboutusComponent
+    },
+    {
+        path: "footer",
+        component: FooterComponent
     }
 ];
