@@ -32,19 +32,19 @@
         <form class="form">
        <p class="form-title">Create an account</p>
         <div class="input-container">
-          <input type="name" placeholder="Enter Name">
+          <input type="name" [(ngModel)]="login.name" placeholder="Enter Name">
           <span>
           </span>
       </div>
       <div class="input-container">
-        <input type="email" placeholder="Enter email">
+        <input type="email" [(ngModel)]="login.email" placeholder="Enter email">
         <span>
         </span>
     </div>
       <div class="input-container">
-          <input type="password" placeholder="Enter password">
+          <input type="password" [(ngModel)]="login.password" placeholder="Enter password">
         </div>
-         <button type="submit" class="submit" href="# " routerLink="/dashboard">
+         <button type="submit" class="submit"(click)="createaccount()">
         Sign in
       </button>  
       <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" >click here to Login</a></p>

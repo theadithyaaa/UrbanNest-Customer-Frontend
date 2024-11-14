@@ -12,16 +12,16 @@ import { NgFor } from '@angular/common';
 })
 export class ListingsComponent implements OnInit {
   ngOnInit(): void {
-    this.getProductInfo();
+    this.getPropertyInfo();
   }
 
-  public productInfo:any = []
+  public propertyInfo:any = []
 
-  async getProductInfo() {
+  async getPropertyInfo() {
     let response = await fetch("http://localhost:8080/property/get-all");
     let body = await response.json();
-    this.productInfo = body;
-    console.log(this.productInfo);
+    this.propertyInfo = body;
+    console.log(this.propertyInfo);
     
   }
 
