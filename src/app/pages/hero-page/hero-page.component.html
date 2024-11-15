@@ -29,22 +29,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style=" justify-content: center; display: flex">
-        <form class="form">
+
+     <form class="form" #loginForm="ngForm"  >
        <p class="form-title">Create an account</p>
         <div class="input-container">
-          <input type="name" [(ngModel)]="login.name" placeholder="Enter Name">
-          <span>
-          </span>
+          <input type="name" [(ngModel)]="login.name" name="name" placeholder="Enter Name">
+          <small class="text-danger" *ngIf="loginForm.submitted && login.name?.errors?.['required']">Name is required</small>
       </div>
       <div class="input-container">
-        <input type="email" [(ngModel)]="login.email" placeholder="Enter email">
-        <span>
-        </span>
+        <input type="email" [(ngModel)]="login.email" name = "email"   placeholder="Enter email">
+        <small class="text-danger" *ngIf="loginForm.submitted && login.email?.errors?.['required']">Email is required</small>
     </div>
       <div class="input-container">
-          <input type="password" [(ngModel)]="login.password" placeholder="Enter password">
+          <input type="password" [(ngModel)]="login.password" name="password" placeholder="Enter password">
+          <small class="text-danger" *ngIf="loginForm.submitted && login.password?.errors?.['required']">Password is required</small>
         </div>
-         <button type="submit" class="submit"(click)="createaccount()">
+         <button type="submit" class="submit" (click)="logincreate()">
         Sign in
       </button>  
       <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" >click here to Login</a></p>
