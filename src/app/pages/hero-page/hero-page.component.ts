@@ -19,35 +19,42 @@ export class HeroPageComponent {
   }
   
   async logincreate() {
-    let response = await fetch("http://localhost:8080/login/add-login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(
-        this.login = {
-          "name": this.login.name,
-          "email": this.login.email,
-          "password": this.login.password,
-          
-        }
-      )
-    })
-    alert('login created successfully');
-    window.location.href = "http://localhost:4200/dashboard";
-    let body = await response.json()
-    alert(JSON.stringify(body));
-    return body;
-    
+    if (!this.login.name || !this.login.email || !this.login.password) {
+      alert("All fields are required");
+      return;
+    }
+  
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.login.email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+  
+    try {
+      let response = await fetch("http://localhost:8080/login/add-login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: this.login.name,
+          email: this.login.email,
+          password: this.login.password
+        })
+      });
+  
+      if (!response.ok) {
+        alert("Failed to create login. Please try again.");
+        return;
+      }
+  
+      alert('Login created successfully');
+      window.location.href = "/dashboard";
+      let body = await response.json();
+      alert(JSON.stringify(body));
+      return body;
+  
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
   }
-
-  // clearFields() {
-  //   this.property = {
-  //     owner: "",
-  //     ownercontact: "",
-  //     location: "",
-  //     district: "",
-  //     price: "",
-  //     type: ""
-  //   };
-  // }
-
 }

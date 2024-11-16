@@ -33,15 +33,15 @@
      <form class="form" #loginForm="ngForm"  >
        <p class="form-title">Create an account</p>
         <div class="input-container">
-          <input type="name" [(ngModel)]="login.name" name="name" placeholder="Enter Name">
+          <input type="name" [(ngModel)]="login.name" name="name" placeholder="Enter Name" required="name">
           <small class="text-danger" *ngIf="loginForm.submitted && login.name?.errors?.['required']">Name is required</small>
       </div>
       <div class="input-container">
-        <input type="email" [(ngModel)]="login.email" name = "email"   placeholder="Enter email">
+        <input type="email" [(ngModel)]="login.email" name = "email"   placeholder="Enter email" required="email">
         <small class="text-danger" *ngIf="loginForm.submitted && login.email?.errors?.['required']">Email is required</small>
     </div>
       <div class="input-container">
-          <input type="password" [(ngModel)]="login.password" name="password" placeholder="Enter password">
+          <input type="password" [(ngModel)]="login.password" name="password" placeholder="Enter password" required="password">
           <small class="text-danger" *ngIf="loginForm.submitted && login.password?.errors?.['required']">Password is required</small>
         </div>
          <button type="submit" class="submit" (click)="logincreate()">
