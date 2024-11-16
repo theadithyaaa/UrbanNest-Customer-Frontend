@@ -14,6 +14,7 @@
 .card {
     margin: 2%;
     background-color: rgba(128, 128, 128, 0.377);
+    margin-bottom: 2px;
 }
 
 .searchbar {
@@ -56,7 +57,6 @@
 .card-title {
     background-color: #007BFF;
     font-weight: bold;
-    margin-bottom: 5px;
     text-align: center;
     color: #fff;
 }

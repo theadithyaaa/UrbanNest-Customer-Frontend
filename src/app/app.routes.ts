@@ -7,6 +7,7 @@ import { AgentComponent } from './pages/agent/agent.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { FooterComponent } from './common/footer/footer.component';
 
+
 export const routes: Routes = [
     {
         path: "",
@@ -36,4 +37,6 @@ export const routes: Routes = [
         path: "footer",
         component: FooterComponent
     }
+   
+   
 ];
