@@ -1,0 +1,27 @@
+.banner {
+    
+    background-image: linear-gradient(rgba(4, 9, 30, 0.861),rgba(4, 9, 30, 0.842)), url('/aboutimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    
+
+    
+}
+
+.content {
+    text-align: center;    
+    color: #fff;
+    font-size: 20px;
+}
+
+.para{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;    
+    margin: 5%;
+}
+
