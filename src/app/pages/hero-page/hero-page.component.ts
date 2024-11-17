@@ -27,7 +27,7 @@ export class HeroPageComponent {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!emailRegex.test(this.login.email) || !passwordRegex.test(this.login.password)) {
-      alert("Please enter a valid email & a password address");
+      alert("Please enter a valid email address & a password");
       return;
     }
   

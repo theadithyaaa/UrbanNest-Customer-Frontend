@@ -5,16 +5,15 @@
     padding: 2%;
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-gap: 70px;
     text-align: center;
-    
 }
-
 
 .card {
     margin: 2%;
     background-color: rgba(128, 128, 128, 0.377);
     margin-bottom: 2px;
+    
 }
 
 .searchbar {
