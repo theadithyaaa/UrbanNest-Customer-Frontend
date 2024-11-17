@@ -1,11 +1,12 @@
 <app-navbar></app-navbar>
+
 <div class="searchbar">
-    <input type="text" class="search" placeholder="Enter location district">
-    <button class="searchbtn">Search</button>
+  <input type="text" [(ngModel)]="district" class="search" placeholder="Enter location district">
+  <button (click)="search()" class="searchbtn">Search</button>
 </div>
+
 <div class="cards">
-  <div class="card" *ngFor="let property of propertyInfo">
-    <!-- <img src="{{property.image}}" class="card-img-top" alt="..."> -->
+  <div class="card" *ngFor="let property of filteredProperties">
     <div class="card-body">
       <h4 class="card-title">{{property.type}}</h4>
       <p class="card-text">
@@ -15,15 +16,13 @@
         {{property.location}}
       </p>
       <h4 style="font-weight: 600;" class="card-text">{{property.price}}</h4>
-      
       <table>
         <tr>
           <td>
-            <a href="#" class="btn btn-primary">Book</a>
+            <a href="#" class="btn btn-primary">Check it out</a>
           </td>
         </tr>
       </table>
     </div>
   </div>
 </div>
-
