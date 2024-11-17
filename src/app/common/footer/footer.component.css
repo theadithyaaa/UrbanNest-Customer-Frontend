@@ -1,10 +1,24 @@
 .footer {
     width: 100%;
-    background-color: #0D92F4;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.888),rgba(4, 9, 30, 0.884)), url('/aboutimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     margin-bottom: 0%;
+    color: white;
 }
 
 .row {
     padding: 5%;
     
 }
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: white;
+}
+

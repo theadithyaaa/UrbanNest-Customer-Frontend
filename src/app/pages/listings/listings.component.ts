@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { NavbarComponent } from "../../common/navbar/navbar.component";
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from "../../common/footer/footer.component";
 
 @Component({
   selector: 'app-listings',
   standalone: true,
-  imports: [RouterLink, NavbarComponent, NgFor, FormsModule],
+  imports: [RouterLink, NavbarComponent, NgFor, FormsModule, FooterComponent],
   templateUrl: './listings.component.html',
   styleUrls: ['./listings.component.css']
 })

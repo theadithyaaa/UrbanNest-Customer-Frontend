@@ -1,10 +1,11 @@
 .banner {
     
-    background-image: linear-gradient(rgba(4, 9, 30, 0.861),rgba(4, 9, 30, 0.842)), url('/aboutimg.jpg');
+    /* background-image: linear-gradient(rgba(4, 9, 30, 0.861),rgba(4, 9, 30, 0.842)), url('/aboutimg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: #1D267D;
     height: 200vh;
     width: 100%;
     
