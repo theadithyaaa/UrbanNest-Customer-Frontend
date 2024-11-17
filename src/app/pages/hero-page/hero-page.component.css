@@ -129,6 +129,12 @@
     transition: 0.3s;          
   }
 
+  .password-requirements {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
 @media (max-width: 768px) {
     .logo {
         font-size: 70px;
