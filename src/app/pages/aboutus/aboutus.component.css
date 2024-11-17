@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     
 
@@ -23,5 +23,26 @@
     color: #fff;
     font-size: 15px;    
     margin: 5%;
+    text-align: justify;
 }
+
+.heading{
+    text-align: left;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 2%;
+    
+}
+
+.img {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
 
