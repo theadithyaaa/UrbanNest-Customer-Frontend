@@ -6,6 +6,11 @@
 </div>
 
 <div class="cards">
+
+  <div class="sorry" *ngIf="filteredProperties.length === 0">
+    <h4 >Sorry! No property found in this area.</h4>
+  </div>
+
   <div class="card" *ngFor="let property of filteredProperties">
     <div class="card-body">
       <h4 class="card-title">{{property.type}}</h4>
