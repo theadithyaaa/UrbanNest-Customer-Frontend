@@ -1,29 +1,62 @@
+<div class="body">
 <app-navbar></app-navbar>
+<div class="heading">
+ 
 
-<div>
-    <h1 class="heading">Tell us What you are looking for?</h1>
-    <div class="cards">
-        <div class="card" style="width: 18rem;" routerLink="/listings">
-            <img src="/viewproperty.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4>Listings</h4>
-               
+ 
+    <div id="textSlider" class="ani">
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 iamCol">
+                <p>Tell us what</p>
+                <p>are you looking for?</p>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slideCol">
+                <div class="scroller">
+                  <div class="inner">
+                    <p>Listings?</p>
+                    <p> Agents?</p>
+                    
+                   
+                  </div>
+                </div>
+              </div>
+      
             </div>
-          </div>
+      
+      
+</div>
 
-          <div class="card" style="width: 18rem;" routerLink="/agent">
-            <img src="/customers.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4>Agent</h4>                  
-            </div>
-          </div>
+<div class="container">
+  <hr>
+  <br>
+  <div class="row" routerLink="/listings">
+      <div class="photo">
+          <img src="/viewproperty.jpg" alt="Listings">
+      </div>
+      <div class="details">
+          <h4>Listings</h4>
+          <p class="txt">Find your dream home or luxury apartments islandwide, from modern cityscapes to tranquil coastal retreats. Whether you're searching for a cozy family home, a sleek urban apartment, or a high-end luxury estate, we have a wide range of listings to suit your needs. Browse properties in your preferred district, explore neighborhoods, and discover the perfect place to call home all at your own pace.</p>
+      </div>
+  </div>
 
-          <div class="card" style="width: 18rem;" routerLink="/aboutus">
-            <img src="/searchproperty.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4>About us</h4>                  
-            </div>
-          </div>
-         
-    </div>
-    <app-footer></app-footer>
+  <div class="row" routerLink="/agent">
+      <div class="details">
+          <h4>Agent</h4>
+          <p class="txt">Connect with our professional agents to get assistance.Our dedicated agents are always here to help you. Whether you have questions or need guidance, you can reach out to us anytime. Contact us through WhatsApp, Instagram, or email, and we’ll ensure you get the support you need to find your perfect property.</p>
+      </div>
+      <div class="photo">
+          <img src="/customers.jpg" alt="Agent">
+      </div>
+  </div>
+
+  <div class="row" routerLink="/aboutus">
+      <div class="photo">
+          <img src="/searchproperty.jpg" alt="About Us">
+      </div>
+      <div class="details">
+          <h4>About Us</h4>
+          <p class="txt">Learn more about who we are and what drives us. At Urbannest, we are committed to helping you find the perfect property while providing exceptional service. Discover our mission, values, and the passionate team working behind the scenes to make your home-buying journey smooth and enjoyable.</p>
+      </div>
+  </div>
+</div>
+ <app-footer></app-footer>
+</div>
