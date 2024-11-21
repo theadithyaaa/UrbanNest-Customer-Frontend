@@ -44,6 +44,10 @@
           <small class="text-danger" *ngIf="loginForm.submitted && login.name?.errors?.['required']">Name is required</small>
       </div>
       <div class="input-container">
+        <input type="contact" [(ngModel)]="login.contact" name = "contact"   placeholder="Enter contact" required="contact">
+        <small class="text-danger" *ngIf="loginForm.submitted && login.contact?.errors?.['required']">contact is required</small>
+    </div>
+      <div class="input-container">
         <input type="email" [(ngModel)]="login.email" name = "email"   placeholder="Enter email" required="email">
         <small class="text-danger" *ngIf="loginForm.submitted && login.email?.errors?.['required']">Email is required</small>
     </div>

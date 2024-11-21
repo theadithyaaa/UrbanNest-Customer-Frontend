@@ -4,6 +4,7 @@ import { NavbarComponent } from "../../common/navbar/navbar.component";
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from "../../common/footer/footer.component";
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-listings',
@@ -37,4 +38,35 @@ export class ListingsComponent implements OnInit {
       this.filteredProperties = this.propertyInfo;
     }
   }
+
+
+async sendEmail(property: any) {
+  try {
+    const templateParams = {
+      property_type: property.type,
+      property_location: property.location,
+      property_price: property.price,
+      to_email: 'urbannest.test@gmail.com' // Fixed recipient email
+    };
+
+    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with your Email.js credentials
+    const response = await emailjs.send(
+      'service_mwjekw9',
+      'template_p5uy7me',
+      templateParams,
+      '4aWBEX6hIozmLixP3'
+    );
+
+    if (response.status === 200) {
+      alert('Email sent successfully!');
+    } else {
+      alert('Failed to send email. Please try again later.');
+    }
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert('An error occurred while sending the email. Please try again.');
+  }
+}
+
+  
 }

@@ -14,12 +14,13 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 export class HeroPageComponent {
   public login: any = {
     name: "",
+    contact: "",
     email: "",
     password:"" 
   }
   
   async logincreate() {
-    if (!this.login.name || !this.login.email || !this.login.password) {
+    if (!this.login.name || !this.login.email || !this.login.password || !this.login.contact) {
       alert("All fields are required");
       return;
     }
@@ -38,7 +39,8 @@ export class HeroPageComponent {
         body: JSON.stringify({
           name: this.login.name,
           email: this.login.email,
-          password: this.login.password
+          password: this.login.password,
+          contact: this.login.contact
         })
       });
   
