@@ -81,13 +81,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 
-
-
-
-
 /* Slider */
-
-
 #textSlider.row {
     transform: translate(-50%, -50%);
     width: 100% !important;
@@ -120,7 +114,7 @@
     text-align: center;
     overflow: hidden;
     font-weight: 900;
-    font-size: 70pt;
+    font-size: 85pt;
     display: block;
     white-space: nowrap;
     line-height: 1.2;
