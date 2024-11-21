@@ -50,6 +50,7 @@ export class HeroPageComponent {
       }
   
       alert('Login created successfully');
+      localStorage.setItem('currentUser', JSON.stringify(this.login));
       window.location.href = "/dashboard";
       let body = await response.json();
       alert(JSON.stringify(body));
@@ -98,6 +99,7 @@ export class HeroPageComponent {
 
       if (validUser) {
         alert('Login successful!');
+        localStorage.setItem('currentUser', JSON.stringify(validUser));
         this.router.navigate(['/dashboard']);
       } else {
         alert('Invalid email or password');

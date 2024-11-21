@@ -40,33 +40,38 @@ export class ListingsComponent implements OnInit {
   }
 
 
-async sendEmail(property: any) {
-  try {
-    const templateParams = {
-      property_type: property.type,
-      property_location: property.location,
-      property_price: property.price,
-      to_email: 'urbannest.test@gmail.com' // Fixed recipient email
-    };
-
-    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with your Email.js credentials
-    const response = await emailjs.send(
-      'service_mwjekw9',
-      'template_p5uy7me',
-      templateParams,
-      '4aWBEX6hIozmLixP3'
-    );
-
-    if (response.status === 200) {
-      alert('Email sent successfully!');
-    } else {
-      alert('Failed to send email. Please try again later.');
+  async sendEmail(property: any) {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+      const recipientEmail = currentUser.email || 'urbannest.test@gmail.com'; 
+  
+      const templateParams = {
+        property_type: property.type,
+        property_location: property.location,
+        property_price: property.price,
+        property_owner: property.owner,
+        owner_contact: property.contact,
+        to_email: recipientEmail 
+      };
+  
+      const response = await emailjs.send(
+        'service_mwjekw9',
+        'template_p5uy7me',
+        templateParams,
+        '4aWBEX6hIozmLixP3'
+      );
+  
+      if (response.status === 200) {
+        alert('Email sent successfully!');
+      } else {
+        alert('Failed to send email. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred while sending the email. Please try again.');
     }
-  } catch (error) {
-    console.error('Error sending email:', error);
-    alert('An error occurred while sending the email. Please try again.');
   }
-}
+  
 
   
 }
