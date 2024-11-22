@@ -29,6 +29,7 @@
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.555);
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;
 }
 
 .row:hover {
@@ -64,6 +65,7 @@
 .details h4 {
     margin: 0 0 10px;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .details p {
@@ -74,6 +76,7 @@
 
 .txt {
     text-align: justify;
+    cursor: pointer;
 }
 
 
@@ -138,6 +141,11 @@
   .scroller .inner {
     animation: 10s normal infinite running scroll;
   }
+
+ .car-img {
+    height: 70vh;
+    width: 90%;
+ }
   
   @keyframes scroll {
    
@@ -149,6 +157,8 @@
       
       
   }
+
+  
   
   /* Mobile First Method */
   @media only screen and (min-width: 320px) and (max-width: 479px) {
