@@ -1,45 +1,73 @@
 <div class="body">
 <app-navbar></app-navbar>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="position-relative">
-          <img src="/customers.jpg" class="img" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text">Get help from our Agents</h5>
-            <p>Connect with our professional agents to get assistance.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="position-relative">
-          <img src="/addproperty.jpg" class="img" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text"> Find Property</h5>
-            <p>whether you are looking to buy a house or rent an apartment, we go you covered.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="position-relative">
-          <img src="/viewproperty.jpg" class="img" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text">Island wide</h5>
-            <p>Browse our wide range of properties across the island.</p>
-          </div>
+
+<div class="container">
+  <div class="row mb-4">
+    <h2 class="text">Our Services</h2>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-house-door service-icon"></i>
+          <h3 class="card-title h5">Island-Wide Properties</h3>
+          <p class="card-text">Access to extensive property listings across the entire island, giving you more options to choose from.</p>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-clock service-icon"></i>
+          <h3 class="card-title h5">24/7 Service</h3>
+          <p class="card-text">Round-the-clock support and assistance available whenever you need us.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-shield-check service-icon"></i>
+          <h3 class="card-title h5">Safety Guaranteed</h3>
+          <p class="card-text">All properties are verified and transactions are secured for your peace of mind.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-wallet2 service-icon"></i>
+          <h3 class="card-title h5">Low Broker Cost</h3>
+          <p class="card-text">Competitive and transparent broker fees to help you save more on your property investment.</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+    <div class="container">
+    <div class="card">
+      <h2 class="section-title"><h3>Leave a feedback or a message</h3></h2>
+      <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="contactName" ngModel required>
+        </div>
+        <div class="form-group">
+          <label>Subject <span class="required">*</span></label>
+          <input type="text" name="subject" ngModel required>
+        </div>
+        <div class="form-group">
+          <label>Message <span class="required">*</span></label>
+          <textarea name="message" rows="4" ngModel required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
+
   
 
   <app-footer></app-footer>
-</div>

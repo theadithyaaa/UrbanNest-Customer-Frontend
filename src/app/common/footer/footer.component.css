@@ -21,3 +21,46 @@
     color: white;
 }
 
+@media screen and (max-width: 1024px) {
+    .footer {
+      background-size: cover;
+    }
+  
+    .row {
+      padding: 3%;
+    }
+  
+    .footer-list {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer {
+      background-size: cover;
+    }
+  
+    .row {
+      padding: 2%;
+    }
+  
+    .footer-list {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer {
+      background-size: cover;
+    }
+  
+    .row {
+      padding: 2%;
+    }
+  
+    .footer-list {
+      font-size: 10px;
+      text-align: center;
+    }
+  }

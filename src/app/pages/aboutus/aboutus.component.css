@@ -1,49 +1,114 @@
-.banner {
-    
-    /* background-image: linear-gradient(rgba(4, 9, 30, 0.861),rgba(4, 9, 30, 0.842)), url('/aboutimg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
-    background-color: rgba(27, 27, 27, 0.377);
-    height: 200vh;
-    width: 100%;
-    
 
-    
-}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-.content {
-    text-align: center;    
-    color: #fff;
-    font-size: 20px;
-}
+  @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
 
-.para{
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 100px 0;
     text-align: center;
-    color: #fff;
-    font-size: 15px;    
-    margin: 5%;
-    text-align: justify;
-}
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+  }
 
-.heading{
-    text-align: left;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 700;
-    margin-top: 5%;
-    margin-left: 5%;
-    padding: 2%;
+  .hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+  }
+
+  .about-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-out;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .grid-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .grid-item h3 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+  }
+
+  .values {
+    background: #f1f5f9;
+    padding: 80px 20px;
+    animation: fadeIn 2.5s ease-out;
+  }
+
+  .values h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 50px;
+  }
+
+  .team {
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 3s ease-out;
+  }
+
+  .feature-icon {
+    font-size: 2.5em;
+    color: #1e3c72;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5em;
+    }
     
-}
-
-.img {
-    width: 50%;
-    height: 50%;
-}
-
-
-
-
-
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }

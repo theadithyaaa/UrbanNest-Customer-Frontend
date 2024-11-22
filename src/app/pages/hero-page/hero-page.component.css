@@ -123,41 +123,7 @@
     margin-top: 5px;
   }
 
-@media (max-width: 768px) {
-    .logo {
-        font-size: 70px;
-        top: 20%;
-    }
 
-    .text {
-        padding-inline: 50px;
-        font-size: 18px;
-        top: 30%;
-    }
-
-    .btnGetStarted {
-        padding: 8px 18px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 50px;
-        top: 20%;
-    }
-
-    .text {
-        padding-inline: 20px;
-        font-size: 14px;
-        top: 30%;
-    }
-
-    .btnGetStarted {
-        padding: 6px 14px;
-        font-size: 12px;
-    }
-}
 
 .animate-charcter
 {
@@ -197,5 +163,73 @@
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+      font-size: 70px;
+      top: 10%;
+  }
+
+  .text {
+      padding-inline: 50px;
+      font-size: 18px;
+  }
+
+  .btnGetStarted {
+      padding: 8px 18px;
+      font-size: 14px;
+  }
+
+  .form {
+      max-width: 90%;  
+      padding: 1rem;
+  }
+
+  .input-container input {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+      font-size: 50px;
+      top: 20%;
+  }
+
+  .text {
+      padding-inline: 20px;
+      font-size: 14px;
+      
+  }
+
+  .btnGetStarted {
+      padding: 6px 14px;
+      font-size: 12px;
+  }
+
+  .form {
+      max-width: 95%;  
+  }
+
+  .input-container input {
+      width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .text {
+      padding-inline: 15px;
+      font-size: 12px; 
+  }
+
+  .btnGetStarted {
+      padding: 5px 12px;
+      font-size: 10px;
+  }
+
+  .form {
+      max-width: 100%;  
   }
 }

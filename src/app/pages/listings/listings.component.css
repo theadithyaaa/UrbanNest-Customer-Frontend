@@ -31,6 +31,7 @@
     background-color: rgba(0, 0, 0, 0.158);
     border: none;
     margin-right: 10px;
+    font-style: italic;
 }
 
 .searchbtn {
@@ -74,142 +75,273 @@
    
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
-body {
-  margin:0px;
-  text-align:center;
-  padding-top:43vh;
-  color:#fff;
-  font-family:'Roboto';
-  font-size:70px;
-  font-weight:100;
-  overflow:hidden;
-  animation:bg 5s linear infinite;
+
+.rw-wrapper{
+  width: 80%;
+
+  margin: 0px auto 0 auto;
+  padding: 10px;
+}
+.rw-sentence{
+  margin: 0;
+}
+.rw-sentence span{
+  text-align: center;
+  color: rgba(255,255,255,1);
+  font-family: 'Roboto Condensed', sans-serif;
+  white-space: nowrap;
+  text-shadow: 2px 5px 10px rgba(0,0,0,0.1);
+}
+.rw-sentence > span{
+  /* position: absolute; */
+}
+.rw-sentence > span:first-child{
+  top: 0px;
+  left: 140px;
+  font-size: 50px;
+  color: rgba(88, 88, 88, 0.6);
+     
+}
+.rw-sentence > span:nth-child(2){
+  top: 160px;
+  left: 30px;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
+}
+.rw-sentence > span:nth-child(3){
+  top: 185px;
+  left: 65px;
+  font-size: 50px;
+  color:rgba(88, 88, 88, 0.6);
 }
 
-.dropping-texts {
-  display: inline-block;
-  width: 180px;
-  text-align: left;
-  height: 36px;
-  vertical-align: -2px;
+.rw-words{
+  
+  height: 80px;
+  width: 400px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+    text-transform: uppercase;
+    font-family: impact;
 }
-
-.dropping-texts > div {
-  font-size:0px;
-  opacity:0;
-  margin-left:-30px;
-  position:absolute;
-  font-weight:300;   
-  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+.rw-words span{
+  position: absolute;
+  font-size: 80px;
+  color: transparent;
+  text-shadow: 0px 0px 80px rgba(68, 68, 68, 0.493);
+  opacity: 0;
+  -webkit-animation: rotateWord 18s linear infinite 0s;
+  -ms-animation: rotateWord 18s linear infinite 0s;
+  animation: rotateWord 18s linear infinite 0s;
 }
-
-.dropping-texts > div:nth-child(1) {
-  animation: roll 5s linear infinite 0s;
+.rw-words span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+  -ms-animation-delay: 3s; 
+  animation-delay: 3s; 
 }
-.dropping-texts > div:nth-child(2) {
-  animation: roll 5s linear infinite 1s;
+.rw-words span:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+  -ms-animation-delay: 6s; 
+  animation-delay: 6s; 
 }
-.dropping-texts > div:nth-child(3) {
-  animation: roll 5s linear infinite 2s;
+.rw-words span:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+  -ms-animation-delay: 9s; 
+  animation-delay: 9s; 
 }
-.dropping-texts > div:nth-child(4) {
-  animation: roll2 5s linear infinite 3s;
+.rw-words span:nth-child(5) { 
+    -webkit-animation-delay: 12s; 
+  -ms-animation-delay: 12s; 
+  animation-delay: 12s; 
 }
-
-@keyframes roll {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  20% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  27% {
-    font-size:0px;
-    opacity:0.5;
-    margin-left:20px;
-    margin-top:100px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
+.rw-words span:nth-child(6) { 
+    -webkit-animation-delay: 15s; 
+  -ms-animation-delay: 15s; 
+  animation-delay: 15s; 
 }
-
-@keyframes roll2 {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  30% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  37% {
-    font-size:1500px;
-    opacity:0;
-    margin-left:-1000px;
-    margin-top:-800px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
+ 
+@keyframes rotateWord {
+    0% { 
+        opacity: 0;        
+        animation-timing-function: ease-in;        
+        transform: translateY(-200px) translateZ(300px) rotateY(-120deg); }
+    5% { 
+        opacity: 1;         
+        animation-timing-function: ease-out;
+        -webkit-transform: translateY(0px) translateZ(0px) rotateY(0deg); transform: translateY(0px) translateZ(0px) rotateY(0deg); 
+    
+    }
+    
+    
+  6% { 
+        text-shadow: 0px 0px 0px rgba(255,255,255,1); 
+        color: #fff; }
+    
+    17% { 
+        opacity: 1; 
+        text-shadow: 0px 0px 0px rgba(255,255,255,1);
+        color: #fff; }
+    
+    20% { opacity: 0; }
+    100% { opacity: 0; }
 }
-
-/* @keyframes bg {
-  0% {background: #ff0075;}
-  3% {background: #0094ff;}
-  20% {background: #0094ff;}
-  23% {background: #b200ff;}
-  40% {background: #b200ff;}
-  43% {background: #8BC34A;}
-  60% {background: #8BC34A;}
-  63% {background: #F44336;}
-  80% {background: #F44336;}
-  83% {background: #F44336;}
-  100% {background: #F44336;}
-} */
+ 
+      .no-cssanimations .rw-words span:first-child{
+        opacity: 1;
+        color: #fff;
+        text-shadow: none;
+      }
 
 
+  .social
+{
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  background:#fff;
+  font-family:verdana;
+  padding:5px;
+  border-radius:5px;
+  animation:new .5s linear infinite;
+  margin-top:-50px;
+}
+.social a
+{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+@keyframes new
+{
+  0%
+  {
+    transform:scaleX(1);
+  }
+  50%
+  {
+    transform:scaleX(.95);
+  }
+  100%
+  {
+    transform:scaleX(1);
+  }
+}
 
+@media screen and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  .rw-words {
+    width: 250px;
+  }
+
+  .rw-words span {
+    font-size: 60px;
+  }
+
+  .search {
+    width: 50%;
+  }
+
+  .searchbar {
+    margin: 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; 
+    grid-gap: 20px;
+  }
+
+  .rw-words {
+    width: 200px;
+  }
+
+  .rw-words span {
+    font-size: 40px;
+  }
+
+  .search {
+    width: 70%;
+  }
+
+  .searchbar {
+    margin: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards {
+    width: 90%;
+  }
+
+  .rw-words {
+    width: 150px;
+  }
+
+  .rw-words span {
+    font-size: 30px;
+  }
+
+  .search {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .rw-wrapper {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .rw-sentence > span:first-child,
+  .rw-sentence > span:nth-child(2),
+  .rw-sentence > span:nth-child(3) {
+    font-size: 40px;
+    left: 20px;
+  }
+
+  .rw-words {
+    width: 100px;
+    height: 60px;
+  }
+
+  .rw-words span {
+    font-size: 50px;
+  }
+
+  .social {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rw-wrapper {
+    width: 85%;
+  }
+
+  .rw-sentence > span:first-child,
+  .rw-sentence > span:nth-child(2),
+  .rw-sentence > span:nth-child(3) {
+    font-size: 45px;
+    left: 40px;
+  }
+
+  .rw-words {
+    width: 150px;
+    height: 70px;
+  }
+
+  .rw-words span {
+    font-size: 70px;
+  }
+
+  .social {
+    bottom: 15px;
+    right: 15px;
+  }
+}
