@@ -14,6 +14,7 @@
 
   <div class="card" *ngFor="let property of filteredProperties">
     <div class="card-body">
+      <img class="card-img" src="/viewproperty.jpg" alt="">
       <h4 class="card-title">{{property.type}}</h4>
       <p class="card-text">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -22,13 +23,9 @@
         {{property.location}}
       </p>
       <h4 style="font-weight: 600;" class="card-text">{{property.price}}</h4>
-      <table>
-        <tr>
-          <td>
-            <a  class="btn btn-primary" (click)="sendEmail(property)">Check it out</a>
-          </td>
-        </tr>
-      </table>
+      <div class="checkbtn">
+        <a  class="btn btn-primary" (click)="sendEmail(property)">Check it out</a>
+        </div>
     </div>
   </div>
 </div>
