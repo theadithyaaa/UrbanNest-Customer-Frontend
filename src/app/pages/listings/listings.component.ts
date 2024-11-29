@@ -5,6 +5,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from "../../common/footer/footer.component";
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listings',
@@ -43,7 +44,7 @@ export class ListingsComponent implements OnInit {
   async sendEmail(property: any) {
     try {
       const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
-      const recipientEmail = currentUser.email || 'urbannest.test@gmail.com'; 
+      const recipientEmail = currentUser.email || 'urbannest.test@gmail.com';
   
       const templateParams = {
         property_type: property.type,
@@ -51,8 +52,18 @@ export class ListingsComponent implements OnInit {
         property_price: property.price,
         property_owner: property.owner,
         owner_contact: property.contact,
-        to_email: recipientEmail 
+        to_email: recipientEmail,
       };
+  
+      Swal.fire({
+        title: 'Sending Email...',
+        text: 'Please wait while we send the email.',
+        icon: 'info',
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
   
       const response = await emailjs.send(
         'service_mwjekw9',
@@ -61,14 +72,34 @@ export class ListingsComponent implements OnInit {
         '4aWBEX6hIozmLixP3'
       );
   
+      Swal.close();
+  
       if (response.status === 200) {
-        alert('Email sent successfully!');
+        Swal.fire({
+          title: 'Email Sent!',
+          text: 'An email has been sent successfully to your email.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        });
       } else {
-        alert('Failed to send email. Please try again later.');
+        Swal.fire({
+          title: 'Failed!',
+          text: 'Failed to send email. Please try again later.',
+          icon: 'error',
+          confirmButtonText: 'Retry',
+        });
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('An error occurred while sending the email. Please try again.');
+  
+      Swal.close();
+  
+      Swal.fire({
+        title: 'Error!',
+        text: 'An error occurred while sending the email. Please try again.',
+        icon: 'error',
+        confirmButtonText: 'Retry',
+      });
     }
   }
   
