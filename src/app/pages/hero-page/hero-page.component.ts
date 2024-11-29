@@ -32,7 +32,7 @@ export class HeroPageComponent {
     }
   
     try {
-      let response = await fetch("http://localhost:8080/login/add-login", {
+      let response = await fetch("http://localhost:8080/login/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
